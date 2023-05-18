@@ -18,14 +18,14 @@ server {
         listen [::]:80 default_server;
 
         location /airbnb-onepage/ {
-                proxy_pass http://54.145.82.168:5000;
+                proxy_pass http://127.0.0.1:5000;
         }
 
         location ~ ^/airbnb-dynamic/number_odd_or_even/(\d+)$ {
-                proxy_pass http://54.145.82.168:5001/number_odd_or_even/$1;
+                proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
         }
 
         location /api/ {
-                proxy_pass http://54.145.82.168:5002;
+                proxy_pass http://127.0.0.1:5002;
         }
 }
